@@ -30,7 +30,7 @@ function KouyouInstitute() {
         id: 1,
         title: 'JLPT N5 Beginners',
         level: 'Starter',
-        image: '/src/n5.jpeg',
+        image: '/public/n5.jpeg',
         backgroundImage: 'linear-gradient(135deg, rgba(33,150,243,0.8), rgba(0,188,212,0.8))',
         features: [
             'Fundamental Grammar',
@@ -42,7 +42,7 @@ function KouyouInstitute() {
         id: 2,
         title: 'JLPT N4 Elementary',
         level: 'Beginner',
-        image: '/src/n4.jpg',
+        image: '/public/n4.jpg',
         backgroundImage: 'linear-gradient(135deg, rgba(76,175,80,0.8), rgba(0,230,118,0.8))',
         features: [
             'Expanded Grammar Patterns',
@@ -54,7 +54,7 @@ function KouyouInstitute() {
         id: 3,
         title: 'JLPT N3 Intermediate',
         level: 'Advanced',
-        image: '/src/n3.jpg',
+        image: '/public/n3.jpg',
         backgroundImage: 'linear-gradient(135deg, rgba(156,39,176,0.8), rgba(103,58,183,0.8))',
         features: [
             'Complex Grammar',
@@ -66,7 +66,7 @@ function KouyouInstitute() {
         id: 4,
         title: 'JLPT N2 Upper Intermediate',
         level: 'Advanced',
-        image: '/src/n2.avif',
+        image: '/public/n2.avif',
         backgroundImage: 'linear-gradient(135deg, rgba(255,152,0,0.8), rgba(255,87,34,0.8))',
         features: [
             'Advanced Grammar Structures',
@@ -78,7 +78,7 @@ function KouyouInstitute() {
         id: 5,
         title: 'JLPT N1 Mastery',
         level: 'Expert',
-        image: '/src/n1.jpg',
+        image: '/public/n1.jpg',
         backgroundImage: 'linear-gradient(135deg, rgba(244,67,54,0.8), rgba(233,30,99,0.8))',
         features: [
             'Academic Japanese',
@@ -132,7 +132,7 @@ function KouyouInstitute() {
     <section 
       className="relative h-screen flex items-center justify-center text-white"
       style={{
-        backgroundImage: 'url(/src/classroom.jpg)',
+        backgroundImage: 'url(/public/classroom.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'top'
       }}
@@ -553,7 +553,7 @@ function ContactSection() {
           </div>
           <div className="space-y-6">
             <div className="bg-cover bg-center h-80 rounded-2xl shadow-lg relative overflow-hidden"
-              style={{ backgroundImage: 'url(/src/whiteboard.jpg)' }}>
+              style={{ backgroundImage: 'url(/public/whiteboard.jpg)' }}>
               <div className="absolute inset-0 bg-black/30 flex items-end p-6">
                 <div className="text-white">
                   <h3 className="text-2xl font-bold">Guiding You to Fluency</h3>
