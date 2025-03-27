@@ -214,7 +214,7 @@ function KouyouInstitute() {
         <div className="grid md:grid-cols-2 gap-8">
           <div 
             className="bg-cover bg-center rounded-2xl overflow-hidden relative h-96"
-            style={{ backgroundImage: 'url(src/Michelle.jpg)' }}
+            style={{ backgroundImage: 'url(/Michelle.jpg)' }}
           >
             <div className="absolute inset-0 bg-black/50 flex items-end p-8">
               <div className="text-white">
@@ -233,7 +233,7 @@ function KouyouInstitute() {
           </div>
           <div 
             className="bg-cover bg-center rounded-2xl overflow-hidden relative h-96"
-            style={{ backgroundImage: 'url(src/dhamma.jpg)' }}
+            style={{ backgroundImage: 'url(/dhamma.jpg)' }}
           >
             <div className="absolute inset-0 bg-black/50 flex items-end p-8">
               <div className="text-white">
