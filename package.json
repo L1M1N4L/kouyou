@@ -16,7 +16,6 @@
     "parallax": "^0.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-parallax": "^3.5.1",
     "react-router-dom": "^7.4.0",
     "tailwindcss": "^4.0.15"
   },
