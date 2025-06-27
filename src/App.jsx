@@ -19,7 +19,9 @@ import {
   Phone,
 
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ModuleHomepage from './ModuleHomepage';
 
 function KouyouInstitute() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -237,7 +239,7 @@ function KouyouInstitute() {
           >
             <div className="absolute inset-0 bg-black/50 flex items-end p-8">
               <div className="text-white">
-                <p className="text-xl italic mb-4">"Kouyou's teaching is detailed yet easy to follow—not too much, not too little. Thanks to their guidance, I’ve improved a lot and am now an intern at ASO College!"</p>
+                <p className="text-xl italic mb-4">"Kouyou's teaching is detailed yet easy to follow—not too much, not too little. Thanks to their guidance, I've improved a lot and am now an intern at ASO College!"</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-green-600 rounded-full mr-4 flex items-center justify-center">
                     <UserCheck className="text-white" />
@@ -305,17 +307,13 @@ const FAQSection = () => {
 
         <div className="space-y-4">
           {faqData.map((faq) => (
-            <motion.div 
+            <div 
               key={faq.id} 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
               className="bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden"
             >
-              <motion.div 
+              <div 
                 onClick={() => setActiveQuestion(activeQuestion === faq.id ? null : faq.id)}
                 className="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-50 transition-colors group"
-                whileTap={{ scale: 0.99 }}
               >
                 <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors md-2">
                   {faq.question}
@@ -325,24 +323,20 @@ const FAQSection = () => {
                     activeQuestion === faq.id ? 'rotate-180' : ''
                   }`} 
                 />
-              </motion.div>
+              </div>
               
               <AnimatePresence>
                 {activeQuestion === faq.id && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.2 }}
+                  <div
                     className="overflow-hidden"
                   >
                     <div className="p-6 pt-0 text-gray-600 border-t">
                       {faq.answer}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -350,15 +344,13 @@ const FAQSection = () => {
           <p className="text-gray-600 mb-6 text-lg">
             Have more questions?
           </p>
-          <motion.a 
+          <a 
             href="#contact" 
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.99 }}
             className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors inline-flex items-center shadow-md hover:shadow-lg"
           >
             Contact Our Team
             <ChevronDown className="ml-2 rotate-[-90deg]" />
-          </motion.a>
+          </a>
         </div>
       </div>
     </section>
@@ -593,4 +585,13 @@ function ContactSection() {
   );
 }
 
-export default KouyouInstitute;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<KouyouInstitute />} />
+        <Route path="/module-homepage" element={<ModuleHomepage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
