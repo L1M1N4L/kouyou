@@ -492,6 +492,7 @@ function ContactSection() {
             <li><a href="#courses" className="text-gray-300 hover:text-white">Courses</a></li>
             <li><a href="#" className="text-gray-300 hover:text-white">JLPT Resources</a></li>
             <li><a href="#" className="text-gray-300 hover:text-white">Study in Japan</a></li>
+            <li><a href="/module-homepage" className="text-gray-300 hover:text-white">For Students</a></li>
           </ul>
         </div>
         <div>
